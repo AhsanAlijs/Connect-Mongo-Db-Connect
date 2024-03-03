@@ -20,8 +20,6 @@ app.post('/api/v1/students', addStudent);
 app.delete('/api/v1/students/:id', deleteStudent);
 app.put('/api/v1/students/:id', updateStudent);
 
-
-
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI);
@@ -36,13 +34,3 @@ connectDB().then(() => {
 }).catch((error) => {
     console.log(error);
 })
-
-
-
-
-
-
-
-// app.listen(process.env.PORT, () => {
-//     console.log(`Example app listening on port ${process.env.PORT}`)
-// })
